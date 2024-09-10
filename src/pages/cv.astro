@@ -1,6 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import TimeLineElement from "../components/cv/TimeLine.astro";
+const skills = [
+  'React', 'Next.js', 'Vue', 'Angular', 'TypeScript', 'JavaScript', 'Svelte.js', 'CSS', 'SCSS',
+  'Node', 'Express', 'Ruby' ,'Ruby on Rails', 'Python', 'Django', 'Flask', 'NumPy', 'TensorFlow', 
+  'Keras', 'Generative AI', 'LangChain', 'FastAPI', 'GPT-4',
+    'MongoDB', 'Oracle','MySQL','PostgreSQL',' Firebase', 'Redis',
+    'React Native', 'Flutter', 'Swift', 'Kotlin',
+    'Cypress', 'Jest', 'Mocha', 'Docker', 'AWS', 'Azure', 'Git', 'Agile', 'Jira', 'Scrum'
+]
 ---
 
 <BaseLayout title="Resume" sideBarActiveItemID="cv">
@@ -84,20 +92,10 @@ import TimeLineElement from "../components/cv/TimeLine.astro";
   </div>
 
   <ul class="list-disc md:columns-5 columns-2 mx-6">
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
-    <li>Skill Name</li>
+   {
+    skills.map(one => {
+      return <li>{one}</li>
+    })
+   }
   </ul>
 </BaseLayout>
